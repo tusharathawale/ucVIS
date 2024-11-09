@@ -28,7 +28,9 @@ After installing the ParaView plugin, the user could load the associated plugin 
 
 The [demo video](https://drive.google.com/file/d/1GS0OJW_HQWHP5HyS8xV0cxbDHKK_sRgR/view?usp=sharing) shows how to run the filter through the ParaView plugin.
 
-#Additional comments:
+The input data file to run a plugin comprises a single vtk file that has multiple 2D ensemble members
+
+### Additional Comments
 -Build paraview against QT 5. By default QT6 will be configured in ccmake. On our system, Qt5 is installed in /usr/local/Cellar/qt@5/5.15.13_1/lib/cmake/Qt5. This will also ensure that there are no errors when generating make file.
 
 - You may need to run cmake -DPARAVIEW_QT_VERSION=5 -DVTK_QT_VERSION=5 ../src/ and then run ccmake for additional configuration e.g., tbb etc. to resolve conflict with Qt6 and successful makefile generation
